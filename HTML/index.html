@@ -1,203 +1,355 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
- 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>A Simple Responsive HTML Email</title>
-  <style type="text/css">
-  body {margin: 0; padding: 0; min-width: 100%!important;}
-  img {height: auto;}
-  .content {width: 100%; max-width: 600px;}
-  .header {padding: 40px 30px 20px 30px;}
-  .innerpadding {padding: 30px 30px 30px 30px;}
-  .borderbottom {border-bottom: 1px solid #f2eeed;}
-  .subhead {font-size: 15px; color: #ffffff; font-family: sans-serif; letter-spacing: 10px;}
-  .h1, .h2, .bodycopy {color: #153643; font-family: sans-serif;}
-  .h1 {font-size: 33px; line-height: 38px; font-weight: bold;}
-  .h2 {padding: 0 0 15px 0; font-size: 24px; line-height: 28px; font-weight: bold;}
-  .bodycopy {font-size: 16px; line-height: 22px;}
-  .button {text-align: center; font-size: 18px; font-family: sans-serif; font-weight: bold; padding: 0 30px 0 30px;}
-  .button a {color: #ffffff; text-decoration: none;}
-  .footer {padding: 20px 30px 15px 30px;}
-  .footercopy {font-family: sans-serif; font-size: 14px; color: #ffffff;}
-  .footercopy a {color: #ffffff; text-decoration: underline;}
-
-  @media only screen and (max-width: 550px), screen and (max-device-width: 550px) {
-  body[yahoo] .hide {display: none!important;}
-  body[yahoo] .buttonwrapper {background-color: transparent!important;}
-  body[yahoo] .button {padding: 0px!important;}
-  body[yahoo] .button a {background-color: #e05443; padding: 15px 15px 13px!important;}
-  body[yahoo] .unsubscribe {display: block; margin-top: 20px; padding: 10px 50px; background: #2f3942; border-radius: 5px; text-decoration: none!important; font-weight: bold;}
-  }
-
-  /*@media only screen and (min-device-width: 601px) {
-    .content {width: 600px !important;}
-    .col425 {width: 425px!important;}
-    .col380 {width: 380px!important;}
-    }*/
-
-  </style>
-</head>
-
-<body yahoo bgcolor="#f6f8f1">
-<table width="100%" bgcolor="#f6f8f1" border="0" cellpadding="0" cellspacing="0">
-<tr>
-  <td>
-    <!--[if (gte mso 9)|(IE)]>
-      <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td>
-    <![endif]-->     
-    <table bgcolor="#ffffff" class="content" align="center" cellpadding="0" cellspacing="0" border="0">
-      <tr>
-        <td bgcolor="#c7d8a7" class="header">
-          <table width="70" align="left" border="0" cellpadding="0" cellspacing="0">  
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>James Family News</title>
+        <style type="text/css">
+		@import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+        body {margin: 0; padding: 0; min-width: 100%!important;}
+        .content {width: 100%; max-width: 600px;}
+		img {height: auto;}
+		.innerpadding {padding: 30px 30px 30px 30px;}
+		.borderbottom {border-bottom: 1px solid #f2eeed;}
+		.h1, .h2, .bodycopy {color: #153643; font-family: sans-serif;}
+		.h1 {font-size: 33px; line-height: 38px; font-weight: bold;}
+		.h2 {padding: 0 0 15px 0; font-size: 24px; line-height: 28px; font-weight: bold;}
+		.bodycopy, .events {font-size: 16px; line-height: 22px;}
+		.button {text-align: center; font-size: 15px; font-family: sans-serif; font-weight: bold; padding: 0 20px 0 20px;}
+		.button a {color: #ffffff; text-decoration: none;}
+		.footer {padding: 25px 30px 45px 30px;}
+		.footercopy {font-family: sans-serif; font-size: 14px; color: #ffffff;}
+		.footercopy a {color: #ffffff; text-decoration: underline;}
+		
+		@media only screen and (max-width: 550px), screen and (max-device-width: 550px) {
+		body[yahoo] .hide {display: none!important;}
+		body[yahoo] .buttonwrapper {background-color: transparent!important;}
+		body[yahoo] .button {padding: 0px!important;}
+		body[yahoo] .button a {background-color: #e05443; padding: 15px 15px 13px!important;}
+		body[yahoo] .unsubscribe {display: block; margin-top: 20px; padding: 10px 50px; background: #2f3942; border-radius: 5px; text-decoration: none!important; font-weight: bold;}
+		}
+		
+		@media screen { /* hides this rule from unsupported clients */ 
+		.h2, .events {
+		font-family: 'Gloria Hallelujah', cursive, Arial, sans-serif !important;
+		}
+		}
+		
+		/* @media only screen and (min-device-width: 601px) {
+		.content {width: 600px !important;}
+		.col425 {width: 425px!important;}
+		.col380 {width: 380px!important;}
+		.col225 {width: 225px!important;}
+		.col245 {width: 245px!important;}	*/
+		}
+        </style>
+		
+    </head>
+    <body yahoo bgcolor="#f6f8f1">
+        <table width="100%" bgcolor="#f6f8f1" border="0" cellpadding="0" cellspacing="0">
             <tr>
-              <td height="70" style="padding: 0 20px 20px 0;">
-                <img class="fix" src="images/icon.gif" width="70" height="70" border="0" alt="" />
-              </td>
-            </tr>
-          </table>
-          <!--[if (gte mso 9)|(IE)]>
-            <table width="425" align="left" cellpadding="0" cellspacing="0" border="0">
-              <tr>
                 <td>
-          <![endif]-->
-          <table class="col425" align="left" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 425px;">  
-            <tr>
-              <td height="70">
-                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td class="subhead" style="padding: 0 0 0 3px;">
-                      CREATING
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="h1" style="padding: 5px 0 0 0;">
-                      Responsive Email Magic
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-          <!--[if (gte mso 9)|(IE)]>
+					<!--[if (gte mso 9)|(IE)]>
+					<table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td>
+								<![endif]-->
+								<table class="content" bgcolor="#ffffff" align="center" cellpadding="0" cellspacing="0" border="0">
+									<tr bgcolor="#f6f8f1">
+										<td class="bodycopy" style="font-size:10px; text-align:center; padding: 20px 0 5px 0;">
+											<a href="http://www.james127trust.org/Static/newsletter/201505/index.html">View in your browser</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img src="http://www.james127trust.org/Static/newsletter/james_family_news.jpg" width="100%" border="0" alt="James Family News" />
+										</td>
+									</tr>
+
+									<tr>
+										<td class="innerpadding borderbottom bodycopy">
+											<p>Dear Subscriber,</p>
+											<p>Thank you for being part of the James Family. Your support makes it possible for us to care together and face enormous challenges which in the grace of things makes for precious opportunity.</p>
+											<p>Robert Botha</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="innerpadding borderbottom">
+										  <table width="290" align="left" border="0" cellpadding="0" cellspacing="0">  
+											<tr>
+											  <td style="padding: 0 20px 20px 0;">
+												<img class="fix" src="http://www.james127trust.org/Static/newsletter/201505/zamo.jpg" width="270" height="205" border="0" alt="Zamo Madladla" />
+											  </td>
+											</tr>
+										  </table>
+										  <!--[if (gte mso 9)|(IE)]>
+											<table width="225" align="left" cellpadding="0" cellspacing="0" border="0">
+											  <tr>
+												<td>
+										  <![endif]-->
+										  <table class="col225" align="left" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 225px;">  
+											<tr>
+											  <td>
+												<table width="100%" border="0" cellspacing="0" cellpadding="0">
+												  <tr>
+													<td style="font-family: cursive, arial, sans-serif;" class="h2">
+														My World
+													</td>
+													</tr>
+												  <tr>
+													<td class="bodycopy">
+													  &ldquo;I would like to thank all the James 1:27 Trust Sponsors for investing and playing a family role in my life. The Trust really provided love and the essence of family for me.&rdquo; <br />Zamo Madladla.
+													</td>
+												  </tr>
+												  <tr>
+													<td style="padding: 20px 0 0 0;">
+													  <div><!--[if mso]>
+													  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://www.james127trust.org/en/news-and-events/zamo-mdladla/" style="height:40px;v-text-anchor:middle;width:128px;" stroke="f" fillcolor="#a4191e">
+														<w:anchorlock/>
+														<center>
+													  <![endif]-->
+														  <a href="http://www.james127trust.org/en/news-and-events/zamo-mdladla/"
+													style="background-color:#a4191e;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:40px;text-align:center;text-decoration:none;width:128px;-webkit-text-size-adjust:none;">Read more...</a>
+													  <!--[if mso]>
+														</center>
+													  </v:rect>
+													  <![endif]--></div>
+													</td>
+												  </tr>
+												</table>
+											  </td>
+											</tr>
+										  </table>
+										  <!--[if (gte mso 9)|(IE)]>
+												</td>
+											  </tr>
+										  </table>
+										  <![endif]-->
+										</td>
+									</tr>
+									<tr>
+										<td class="innerpadding borderbottom">
+										  <table class="col245" align="left" border="0" cellpadding="0" cellspacing="0" style="width: 245px; padding: 0 20px 0 0;">  
+											<tr>
+											  <td>
+												<table width="100%" border="0" cellspacing="0" cellpadding="0">
+												  <tr>
+													<td style="font-family: cursive, arial, sans-serif;" class="h2">
+														Xenophobia
+													</td>
+													</tr>
+												  <tr>
+													<td class="bodycopy">
+													  History has repeatedly taught that if we do not protect the foreigner, we will ourselves one day find ourselves a foreigner in our own land.
+													</td>
+												  </tr>
+												  <tr>
+													<td style="padding: 20px 0 20px 0;">
+													  <div><!--[if mso]>
+													  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://www.james127trust.org/en/news-and-events/zamo-mdladla/" style="height:40px;v-text-anchor:middle;width:128px;" stroke="f" fillcolor="#a4191e">
+														<w:anchorlock/>
+														<center>
+													  <![endif]-->
+														  <a href="http://www.james127trust.org/en/news-and-events/xenophobia-response/"
+													style="background-color:#a4191e;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:40px;text-align:center;text-decoration:none;width:128px;-webkit-text-size-adjust:none;">Read more...</a>
+													  <!--[if mso]>
+														</center>
+													  </v:rect>
+													  <![endif]--></div>
+													</td>
+												  </tr>
+												</table>
+											  </td>
+											</tr>
+										  </table>
+										  
+										  <!--[if (gte mso 9)|(IE)]>
+											<table width="270" align="left" cellpadding="0" cellspacing="0" border="0">
+											  <tr>
+												<td>
+										  <![endif]-->
+										  <table width="270" align="left" border="0" cellpadding="0" cellspacing="0">  
+											<tr>
+											  <td style="padding: 0;">
+												<img class="fix" src="http://www.james127trust.org/Static/newsletter/201505/xenophobia.jpg" width="270" height="205" border="0" alt="One Africa for all Africans" />
+											  </td>
+											</tr>
+										  </table>
+										  <!--[if (gte mso 9)|(IE)]>
+												</td>
+											  </tr>
+										  </table>
+										  <![endif]-->
+										</td>
+									</tr>
+									<tr>
+										<td class="innerpadding borderbottom">
+										  <table width="290" align="left" border="0" cellpadding="0" cellspacing="0">  
+											<tr>
+											  <td style="padding: 0 20px 20px 0;">
+												<img class="fix" src="http://www.james127trust.org/Static/newsletter/201505/mothers_day.jpg" width="270" height="205" border="0" alt="" />
+											  </td>
+											</tr>
+										  </table>
+										  <!--[if (gte mso 9)|(IE)]>
+											<table width="225" align="left" cellpadding="0" cellspacing="0" border="0">
+											  <tr>
+												<td>
+										  <![endif]-->
+										  <table class="col225" align="left" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 225px;">  
+											<tr>
+											  <td>
+												<table width="100%" border="0" cellspacing="0" cellpadding="0">
+												  <tr>
+													<td style="font-family: cursive, arial, sans-serif;" class="h2">
+														Mother's Day
+													</td>
+													</tr>
+												  <tr>
+													<td class="bodycopy">
+													  Let's appreciate the ladies who are stepping up and being God's hands in a broken world.
+													</td>
+												  </tr>
+												  <tr>
+													<td style="padding: 20px 0 0 0;">
+													  <div><!--[if mso]>
+													  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://www.james127trust.org/en/news-and-events/zamo-mdladla/" style="height:40px;v-text-anchor:middle;width:128px;" stroke="f" fillcolor="#a4191e">
+														<w:anchorlock/>
+														<center>
+													  <![endif]-->
+														  <a href="http://www.james127trust.org/en/news-and-events/mothers-day/"
+													style="background-color:#a4191e;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:40px;text-align:center;text-decoration:none;width:128px;-webkit-text-size-adjust:none;">Read more...</a>
+													  <!--[if mso]>
+														</center>
+													  </v:rect>
+													  <![endif]--></div>
+													</td>
+												  </tr>
+												</table>
+											  </td>
+											</tr>
+										  </table>
+										  <!--[if (gte mso 9)|(IE)]>
+												</td>
+											  </tr>
+										  </table>
+										  <![endif]-->
+										</td>
+									</tr>
+									<tr>
+										<td style="padding: 15px 30px 15px 30px;">
+										  <table width="290" align="left" border="0" cellpadding="0" cellspacing="0">  
+											<tr>
+											  <td style="font-family: cursive, arial, sans-serif;" class="events" style="padding: 0 20px 20px 0;">
+												Previous Events:<br />
+												<a href="http://www.james127trust.org/en/news-and-events/journey-to-the-dream-article/">Journey to the Dream</a>
+											  </td>
+											</tr>
+										  </table>
+										  <!--[if (gte mso 9)|(IE)]>
+											<table width="225" align="left" cellpadding="0" cellspacing="0" border="0">
+											  <tr>
+												<td>
+										  <![endif]-->
+										  <table class="col225" align="left" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 225px;">  
+											<tr>
+											  <td style="font-family: cursive, arial, sans-serif;" class="events" style="padding: 0 20px 20px 0;">
+												Upcoming Events:<br />
+												<a href="http://www.james127trust.org/en/news-and-events/winter-warmer/">Winter Warmers</a>
+											  </td>
+											</tr>
+										  </table>
+										  <!--[if (gte mso 9)|(IE)]>
+												</td>
+											  </tr>
+										  </table>
+										  <![endif]-->
+										</td>
+									</tr>
+									<tr>
+									  <td style="padding: 5px 30px 15px 30px;" class="borderbottom">
+										<table width="115" align="left" border="0" cellpadding="0" cellspacing="0"> 
+										  <tr>
+											<td height="115" style="padding: 0 20px 0 0;">
+											  <img src="http://www.james127trust.org/Static/newsletter/201505/sponsor.png" width="115" height="115" border="0" alt="Cathy Nell" />
+											</td>
+										  </tr>
+										</table>
+										<!--[if (gte mso 9)|(IE)]>
+										  <table width="380" align="left" cellpadding="0" cellspacing="0" border="0">
+											<tr>
+											  <td>
+										<![endif]-->
+										<table class="col380" align="left" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 380px;"> 
+										  <tr>
+											<td class="bodycopy" height="115" style="vertical-align: middle;">
+											  &ldquo;We are definitely making a difference in these young children's lives&rdquo;
+											  <span style="color: #2f467c;"> - Cathy Nell, contributor to the James 1:27 Trust since 2004</span>
+											</td>
+										  </tr>
+										</table>
+										<!--[if (gte mso 9)|(IE)]>
+											  </td>
+											</tr>
+										</table>
+										<![endif]-->
+									  </td>
+									</tr>
+
+									<tr>
+										<td class="footer" bgcolor="#2f467c">
+										  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+											<tr>
+											  <td align="left" width="290">
+												<table border="0" cellspacing="0" cellpadding="0">
+												  <tr>
+													<td style="font-size: 16px; padding: 0 5px 0 5px; text-align: right;" width="100" class="footercopy">
+													  Join us on:
+													</td>
+												    <td width="37" style="text-align: center; padding: 0 5px 0 5px;">
+													  <a href="https://www.linkedin.com/groups/James-1-27-Trust-8286601/about">
+														<img src="http://www.james127trust.org/Static/newsletter/linkedin.png" width="37" height="37" alt="Twitter" border="0" />
+													  </a>
+													</td>
+													<td width="37" style="text-align: center; padding: 0 5px 0 5px;">
+													  <a href="http://www.facebook.com/james127trust">
+														<img src="http://www.james127trust.org/Static/newsletter/facebook.png" width="37" height="37" alt="Facebook" border="0" />
+													  </a>
+													</td>
+													<td width="37" style="text-align: center; padding: 0 5px 0 5px;">
+													  <a href="http://twitter.com/james127trust/">
+														<img src="http://www.james127trust.org/Static/newsletter/twitter.png" width="37" height="37" alt="Twitter" border="0" />
+													  </a>
+													</td>
+												  </tr>
+												</table>
+											  </td>
+											  
+											  <td align="left" width="290">
+												<table border="0" cellspacing="0" cellpadding="0">
+												  <tr>
+													<td style="font-size: 16px; padding: 0 5px 0 5px; text-align: right;" width="150" class="footercopy">
+													  Visit our website:
+													</td>
+													<td width="37" style="text-align: center; padding: 0 5px 0 5px;">
+													  <a href="http://www.james127trust.org/">
+														<img src="http://www.james127trust.org/Static/newsletter/website.png" width="37" height="37" alt="Twitter" border="0" />
+													  </a>
+													</td>
+												  </tr>
+												</table>
+											  </td>
+											</tr>
+										  </table>
+										</td>
+									  </tr>
+								</table>
+								<!--[if (gte mso 9)|(IE)]>
+							</td>
+						</tr>
+					</table>
+					<![endif]-->
                 </td>
-              </tr>
-          </table>
-          <![endif]-->
-        </td>
-      </tr>
-      <tr>
-        <td class="innerpadding borderbottom">
-          <table width="100%" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <td class="h2">
-                Welcome to our responsive email!
-              </td>
             </tr>
-            <tr>
-              <td class="bodycopy">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus adipiscing felis, sit amet blandit ipsum volutpat sed. Morbi porttitor, eget accumsan dictum, nisi libero ultricies ipsum, in posuere mauris neque at erat.
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-      <tr>
-        <td class="innerpadding borderbottom">
-          <table width="115" align="left" border="0" cellpadding="0" cellspacing="0">  
-            <tr>
-              <td height="115" style="padding: 0 20px 20px 0;">
-                <img class="fix" src="images/article1.png" width="115" height="115" border="0" alt="" />
-              </td>
-            </tr>
-          </table>
-          <!--[if (gte mso 9)|(IE)]>
-            <table width="380" align="left" cellpadding="0" cellspacing="0" border="0">
-              <tr>
-                <td>
-          <![endif]-->
-          <table class="col380" align="left" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 380px;">  
-            <tr>
-              <td>
-                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td class="bodycopy">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus adipiscing felis, sit amet blandit ipsum volutpat sed. Morbi porttitor, eget accumsan dictum, nisi libero ultricies ipsum, in posuere mauris neque at erat.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 20px 0 0 0;">
-                      <table class="buttonwrapper" bgcolor="#e05443" border="0" cellspacing="0" cellpadding="0">
-                        <tr>
-                          <td class="button" height="45">
-                            <a href="#">Claim yours!</a>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-          <!--[if (gte mso 9)|(IE)]>
-                </td>
-              </tr>
-          </table>
-          <![endif]-->
-        </td>
-      </tr>
-      <tr>
-        <td class="innerpadding borderbottom">
-          <img class="fix" src="images/wide.png" width="100%" border="0" alt="" />
-        </td>
-      </tr>
-      <tr>
-        <td class="innerpadding bodycopy">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus adipiscing felis, sit amet blandit ipsum volutpat sed. Morbi porttitor, eget accumsan dictum, nisi libero ultricies ipsum, in posuere mauris neque at erat.
-        </td>
-      </tr>
-      <tr>
-        <td class="footer" bgcolor="#44525f">
-          <table width="100%" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <td align="center" class="footercopy">
-                &reg; Someone, somewhere 2013<br/>
-                <a href="#" class="unsubscribe"><font color="#ffffff">Unsubscribe</font></a> 
-                <span class="hide">from this newsletter instantly</span>
-              </td>
-            </tr>
-            <tr>
-              <td align="center" style="padding: 20px 0 0 0;">
-                <table border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td width="37" style="text-align: center; padding: 0 10px 0 10px;">
-                      <a href="http://www.facebook.com/">
-                        <img src="images/facebook.png" width="37" height="37" alt="Facebook" border="0" />
-                      </a>
-                    </td>
-                    <td width="37" style="text-align: center; padding: 0 10px 0 10px;">
-                      <a href="http://www.twitter.com/">
-                        <img src="images/twitter.png" width="37" height="37" alt="Twitter" border="0" />
-                      </a>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-    <!--[if (gte mso 9)|(IE)]>
-          </td>
-        </tr>
-    </table>
-    <![endif]-->
-    </td>
-  </tr>
-</table>
-</body>
+        </table>
+    </body>
 </html>
